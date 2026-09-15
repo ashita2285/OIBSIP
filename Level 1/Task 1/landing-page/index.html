@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lumière | Modern Living</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                Lumière
+            </div>
+
+           <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><button class="login-btn" onclick="openLogin()">Login</button></li>
+</ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-heading">WELCOME TO LUMIÈRE</p>
+
+            <h1>
+                Simple Living.<br>
+                Beautifully Designed.
+            </h1>
+
+            <p class="hero-text">
+                Discover thoughtfully designed products that bring
+                comfort, elegance and simplicity into your everyday life.
+            </p>
+
+            <a href="#features" class="cta-button">
+                Explore Now
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+
+        <div class="section-heading">
+            <p>WHY LUMIÈRE</p>
+            <h2>Designed for Everyday Life</h2>
+        </div>
+
+        <div class="feature-container">
+
+            <div class="feature-card">
+                <div class="icon">✦</div>
+                <h3>Elegant Design</h3>
+                <p>
+                    Minimal and beautiful designs created to complement
+                    your lifestyle.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">♡</div>
+                <h3>Made With Care</h3>
+                <p>
+                    Every detail is carefully considered to provide
+                    quality and comfort.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">✓</div>
+                <h3>Simple Experience</h3>
+                <p>
+                    We believe great products should be simple,
+                    useful and enjoyable.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about" id="about">
+
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=900&q=80"
+                 alt="Minimal modern interior">
+        </div>
+
+        <div class="about-content">
+
+            <p class="small-heading">OUR STORY</p>
+
+            <h2>
+                Creating Beauty<br>
+                Through Simplicity
+            </h2>
+
+            <p>
+                Lumière was created with one simple idea — everyday
+                products can be both functional and beautiful.
+            </p>
+
+            <p>
+                We combine thoughtful design, quality materials and
+                timeless aesthetics to create experiences you'll love.
+            </p>
+
+            <a href="#contact" class="secondary-button">
+                Learn More
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Testimonial Section -->
+    <section class="testimonial">
+
+        <p class="quote">
+            “Lumière brings a perfect balance of simplicity,
+            elegance and functionality.”
+        </p>
+
+        <p class="customer">
+            — Sarah Williams
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="contact">
+
+        <div class="footer-content">
+
+            <div>
+                <h3>Lumière</h3>
+                <p>Beautiful things for everyday living.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">LinkedIn</a>
+                <a href="mailto:hello@example.com">Email</a>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>© 2026 Lumière. All rights reserved.</p>
+        </div>
+
+    </footer>
+<!-- Login Popup -->
+ <!-- SIGN UP POPUP -->
+
+<div class="login-overlay" id="signupOverlay">
+
+    <div class="login-box">
+
+        <button class="close-btn" onclick="closeSignup()">×</button>
+
+        <h2>Create Account</h2>
+
+        <p>Join the Lumière community</p>
+
+        <form id="signupForm">
+
+            <label>Name</label>
+
+            <input
+                type="text"
+                id="signupName"
+                placeholder="Enter your name"
+                required
+            >
+
+            <label>Email</label>
+
+            <input
+                type="email"
+                id="signupEmail"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                id="signupPassword"
+                placeholder="Create a password"
+                required
+            >
+
+            <button type="submit" class="login-submit">
+                Create Account
+            </button>
+
+            <p id="signupMessage"></p>
+
+        </form>
+
+    </div>
+
+</div>
+
+<div class="login-overlay" id="loginOverlay">
+
+    <div class="login-box">
+
+        <button class="close-btn" onclick="closeLogin()">×</button>
+
+        <h2>Welcome Back</h2>
+
+        <p>Login to your Lumière account</p>
+
+       <form id="loginForm">
+
+    <label>Email</label>
+
+    <input 
+        type="email" 
+        id="loginEmail"
+        placeholder="Enter your email"
+        required
+    >
+
+    <label>Password</label>
+
+    <input 
+        type="password" 
+        id="loginPassword"
+        placeholder="Enter your password"
+        required
+    >
+
+    <button type="submit" class="login-submit">
+        Login
+    </button>
+
+    <p id="loginMessage"></p>
+
+</form>
+
+        <p class="signup-text">
+    Don't have an account?
+    <a href="#" onclick="openSignup()">Sign Up</a>
+</p>
+    </div>
+
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
+</body>
+</html>

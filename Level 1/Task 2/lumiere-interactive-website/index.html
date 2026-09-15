@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumière | Modern Living</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+    <a class="logo" href="#home">Lumière</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+    <nav id="mainNav">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+        <button class="icon-btn" id="searchBtn" title="Search">⌕</button>
+        <button class="icon-btn" id="wishlistBtn" title="Wishlist">♡ <span id="wishlistCount">0</span></button>
+        <button class="icon-btn" id="cartBtn" title="Cart">🛒 <span id="cartCount">0</span></button>
+        <button class="login-btn" id="loginBtn">Login</button>
+    </div>
+</header>
+
+<div class="search-panel" id="searchPanel">
+    <input type="search" id="searchInput" placeholder="Search products, categories...">
+</div>
+
+<main>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="eyebrow">MODERN LIVING • THOUGHTFUL DESIGN</span>
+            <h1>Make Your Everyday<br><span>Beautiful.</span></h1>
+            <p>Discover carefully selected pieces that bring comfort, character and simplicity into your everyday life.</p>
+            <div class="hero-buttons">
+                <a href="#shop" class="primary-btn">Explore Collection</a>
+                <button class="text-btn" data-info="Lumière is a modern lifestyle collection focused on elegant, useful and timeless products for everyday spaces.">Discover Lumière →</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="highlights">
+        <div><strong>Free Delivery</strong><span>On orders over ₹1,999</span></div>
+        <div><strong>Curated Quality</strong><span>Thoughtfully selected products</span></div>
+        <div><strong>Easy Returns</strong><span>Simple 7-day return policy</span></div>
+        <div><strong>Secure Shopping</strong><span>Your demo data stays in your browser</span></div>
+    </section>
+
+    <section class="section" id="categories">
+        <div class="section-head">
+            <div>
+                <span class="eyebrow">EXPLORE</span>
+                <h2>Shop by Category</h2>
+            </div>
+            <p>Choose a category to discover products designed for different parts of your lifestyle.</p>
+        </div>
+
+        <div class="category-grid">
+            <button class="category-card" data-category="Home">
+                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=80" alt="Home decor">
+                <span>Home</span><small>Warm spaces & decor</small>
+            </button>
+            <button class="category-card" data-category="Fashion">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=80" alt="Fashion">
+                <span>Fashion</span><small>Simple everyday style</small>
+            </button>
+            <button class="category-card" data-category="Wellness">
+                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=700&q=80" alt="Wellness">
+                <span>Wellness</span><small>Calm & mindful essentials</small>
+            </button>
+            <button class="category-card" data-category="Accessories">
+                <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=700&q=80" alt="Accessories">
+                <span>Accessories</span><small>Details that complete you</small>
+            </button>
+        </div>
+    </section>
+
+    <section class="section shop-section" id="shop">
+        <div class="section-head">
+            <div>
+                <span class="eyebrow">OUR COLLECTION</span>
+                <h2>Featured Products</h2>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter active" data-filter="All">All</button>
+                <button class="filter" data-filter="Home">Home</button>
+                <button class="filter" data-filter="Fashion">Fashion</button>
+                <button class="filter" data-filter="Wellness">Wellness</button>
+                <button class="filter" data-filter="Accessories">Accessories</button>
+            </div>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="about section" id="about">
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1000&q=80" alt="Minimal interior">
+        </div>
+        <div>
+            <span class="eyebrow">OUR STORY</span>
+            <h2>Thoughtful design for a simpler life.</h2>
+            <p>Lumière brings together products that feel good to use and easy to live with. We believe good design should be beautiful without becoming complicated.</p>
+            <button class="primary-btn" data-info="Our goal is to make everyday choices easier: fewer unnecessary details, better materials, useful features and timeless design.">Read Our Story</button>
+        </div>
+    </section>
+
+    <section class="info-strip">
+        <div>
+            <span class="eyebrow">WHY CHOOSE US</span>
+            <h2>Small details. Better everyday moments.</h2>
+        </div>
+        <div class="info-cards">
+            <button data-info="Every product is selected for practical value, appearance and long-term everyday usefulness."><strong>01</strong><span>Curated</span><small>Products with purpose</small></button>
+            <button data-info="We keep the shopping experience simple, with clear product information and an easy demo cart."><strong>02</strong><span>Simple</span><small>Easy to explore</small></button>
+            <button data-info="The demo includes responsive layouts, accessible buttons, useful feedback messages and local browser storage."><strong>03</strong><span>Reliable</span><small>Designed for everyone</small></button>
+        </div>
+    </section>
+
+    <section class="section reviews" id="reviews">
+        <div class="section-head">
+            <div>
+                <span class="eyebrow">CUSTOMER LOVE</span>
+                <h2>What People Say</h2>
+            </div>
+        </div>
+        <div class="review-grid">
+            <article><div>★★★★★</div><p>“The design feels calm and premium. Everything is easy to find.”</p><strong>— Ananya</strong></article>
+            <article><div>★★★★★</div><p>“I loved being able to read the product details before adding something to the cart.”</p><strong>— Riya</strong></article>
+            <article><div>★★★★★</div><p>“Clean, simple and beautiful. It feels like a real shopping website.”</p><strong>— Meera</strong></article>
+        </div>
+    </section>
+
+    <section class="section faq" id="faq">
+        <div class="section-head">
+            <div>
+                <span class="eyebrow">HELP CENTER</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <p>Click any question to view the answer.</p>
+        </div>
+        <div class="faq-list">
+            <button class="faq-item"><span>How does the cart work?</span><b>+</b><p>You can add products, change quantities and remove products. Your demo cart is saved in your browser.</p></button>
+            <button class="faq-item"><span>Is the login real?</span><b>+</b><p>This project includes a front-end demo login using browser storage. A production website would need a secure backend and database.</p></button>
+            <button class="faq-item"><span>Can I search for products?</span><b>+</b><p>Yes. Use the search icon in the navigation and type a product name or category.</p></button>
+            <button class="faq-item"><span>How can I contact Lumière?</span><b>+</b><p>Use the contact form below. In this demo it shows a success message rather than sending a real email.</p></button>
+        </div>
+    </section>
+
+    <section class="contact section" id="contact">
+        <div>
+            <span class="eyebrow">GET IN TOUCH</span>
+            <h2>Have a question?</h2>
+            <p>Send us a message and our team will get back to you.</p>
+        </div>
+        <form id="contactForm">
+            <input id="contactName" type="text" placeholder="Your name" required>
+            <input id="contactEmail" type="email" placeholder="Your email" required>
+            <textarea id="contactMessage" placeholder="Your message" rows="5" required></textarea>
+            <button class="primary-btn" type="submit">Send Message</button>
+            <p class="form-message" id="contactMessageStatus"></p>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-top">
+        <div>
+            <a class="logo footer-logo" href="#home">Lumière</a>
+            <p>Beautiful things for everyday living.</p>
+        </div>
+        <div>
+            <h4>Explore</h4>
+            <a href="#shop">Shop</a>
+            <a href="#categories">Categories</a>
+            <a href="#about">About</a>
+        </div>
+        <div>
+            <h4>Support</h4>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+            <button class="footer-link" id="footerLogin">Login</button>
+        </div>
+        <div>
+            <h4>Social</h4>
+            <a href="#" data-info="Instagram is a placeholder social link for this student project.">Instagram</a>
+            <a href="#" data-info="Facebook is a placeholder social link for this student project.">Facebook</a>
+            <a href="#" data-info="LinkedIn is a placeholder social link for this student project.">LinkedIn</a>
+        </div>
+    </div>
+    <div class="copyright">© 2026 Lumière. Student project demo.</div>
+</footer>
+
+<div class="modal-overlay" id="infoModal">
+    <div class="modal">
+        <button class="modal-close" data-close="infoModal">×</button>
+        <span class="eyebrow">LUMIÈRE</span>
+        <h2 id="infoTitle">Information</h2>
+        <p id="infoText"></p>
+        <button class="primary-btn" data-close="infoModal">Got it</button>
+    </div>
+</div>
+
+<div class="modal-overlay" id="productModal">
+    <div class="modal product-modal">
+        <button class="modal-close" data-close="productModal">×</button>
+        <img id="modalProductImage" src="" alt="">
+        <div>
+            <span class="eyebrow" id="modalProductCategory"></span>
+            <h2 id="modalProductName"></h2>
+            <p id="modalProductDescription"></p>
+            <h3 id="modalProductPrice"></h3>
+            <button class="primary-btn" id="modalAddCart">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="loginModal">
+    <div class="modal">
+        <button class="modal-close" data-close="loginModal">×</button>
+        <span class="eyebrow">ACCOUNT</span>
+        <h2 id="authTitle">Welcome Back</h2>
+        <p id="authSubtitle">Login to your Lumière account.</p>
+        <form id="authForm">
+            <div id="nameField" class="hidden">
+                <input id="authName" type="text" placeholder="Full name">
+            </div>
+            <input id="authEmail" type="email" placeholder="Email address" required>
+            <input id="authPassword" type="password" placeholder="Password" required minlength="4">
+            <button class="primary-btn full" type="submit" id="authSubmit">Login</button>
+            <p class="form-message" id="authMessage"></p>
+        </form>
+        <button class="switch-auth" id="switchAuth">New here? Create an account</button>
+    </div>
+</div>
+
+<div class="side-panel" id="cartPanel">
+    <div class="panel-head">
+        <h2>Your Cart</h2>
+        <button class="modal-close" id="closeCart">×</button>
+    </div>
+    <div id="cartItems"></div>
+    <div class="cart-total" id="cartTotal"></div>
+    <button class="primary-btn full" id="checkoutBtn">Proceed to Checkout</button>
+</div>
+
+<div class="side-panel" id="wishlistPanel">
+    <div class="panel-head">
+        <h2>Your Wishlist</h2>
+        <button class="modal-close" id="closeWishlist">×</button>
+    </div>
+    <div id="wishlistItems"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
